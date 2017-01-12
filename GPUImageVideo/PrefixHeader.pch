@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  GPUImageVideo
+//
+//  Created by Chuz NetTech on 16/9/7.
+//  Copyright © 2016年 Chuz NetTech. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "GPUImage.h"
+
+
+#endif
