@@ -43,13 +43,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 #pragma mark  -----  录制视频加滤镜与美颜  ------
-    videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetHigh cameraPosition:AVCaptureDevicePositionFront];
+    videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetiFrame960x540 cameraPosition:AVCaptureDevicePositionFront];
     videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
-    videoCamera.horizontallyMirrorFrontFacingCamera = NO;
+    videoCamera.horizontallyMirrorFrontFacingCamera = YES;
     videoCamera.horizontallyMirrorRearFacingCamera = NO;
 
     
-    GPUImageView *backView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 0, kFCScreenWidth, kFCScreenWidth)];
+    GPUImageView *backView = [[GPUImageView alloc] initWithFrame:CGRectMake(0, 0, kFCScreenWidth, kFCScreenHeight)];
     [self.view addSubview:backView];
     
     NSArray *array = [[NSArray alloc] initWithObjects:@"0000",@"1111",@"2222",@"3333",@"4444",@"5555", nil];
@@ -67,17 +67,52 @@
     [(GPUImageSepiaFilter *)filter setIntensity:0];
     
     
-    cropFliter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.0, (kFCScreenHeight - kFCScreenWidth) / 2.0 / kFCScreenHeight, 1.0, kFCScreenWidth / kFCScreenHeight)];
+//    cropFliter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.0, (kFCScreenHeight - kFCScreenWidth) / 2.0 / kFCScreenHeight, 1.0, kFCScreenWidth / kFCScreenHeight)];
     
-    [videoCamera addTarget:filter];
     
-    [filter addTarget:cropFliter];
+    
+//    [filter addTarget:cropFliter];
     
     filterView = (GPUImageView *)backView;
     filterView.fillMode = kGPUImageFillModePreserveAspectRatioAndFill;
     
     
-    [cropFliter addTarget:filterView];
+    UIImage *image = [UIImage imageNamed:@"123456.jpeg"];
+    UIImageView *waterFliter = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, 100, 150)];
+    [waterFliter setImage:image];
+    
+    _brightFilter = [[GPUImageBrightnessFilter alloc] init];
+    _brightFilter.brightness = 0.0f;
+    
+    _blendFliter = [[GPUImageAlphaBlendFilter alloc] init];
+    _blendFliter.mix = 1.0;
+    
+    UIView *cotentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kFCScreenWidth, kFCScreenHeight)];
+    cotentView.backgroundColor = [UIColor clearColor];
+    [cotentView addSubview:waterFliter];
+    
+    _uiElement = [[GPUImageUIElement alloc] initWithView:cotentView];
+    
+    
+    [_blendFliter useNextFrameForImageCapture];
+    
+    
+    __weak typeof(self) weakSelf = self;
+    [_brightFilter setFrameProcessingCompletionBlock:^(GPUImageOutput *output, CMTime Time) {
+        
+        
+        //weakSelf.currentDateStr = [weakSelf.dateFormat stringFromDate:[NSDate date]];
+        //  weakSelf.label.text = weakSelf.currentDateStr;
+        
+        [weakSelf.uiElement update];
+    }];
+
+    [videoCamera addTarget:filter];
+    [filter addTarget:_brightFilter];
+    [_brightFilter addTarget:_blendFliter];
+    [_uiElement addTarget:_blendFliter];
+    [_blendFliter addTarget:filterView];
+    
     
     [videoCamera startCameraCapture];
     
@@ -96,11 +131,11 @@
         NSURL * movieURL = [NSURL fileURLWithPath:pathToMovie];
         currentMovieURL = movieURL;
         
-        movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(480, 480)];
+        movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(540, 960)];
         
         movieWriter.encodingLiveVideo = YES;
         
-        [cropFliter addTarget:movieWriter];
+        [_blendFliter addTarget:movieWriter];
         
         double delayToStartRecording = 0.1;
         dispatch_time_t startTime = dispatch_time(DISPATCH_TIME_NOW, delayToStartRecording * NSEC_PER_SEC);
@@ -129,24 +164,34 @@
             [videoCamera removeAllTargets];
             filter = [[GPUImageBeautifyFilter alloc] init];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
         case 1:{
             [videoCamera removeAllTargets];
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"cross_1"];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+            
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
         case 2:{
             [videoCamera removeAllTargets];
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"cross_2"];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
         case 3:{
@@ -154,24 +199,33 @@
             filter = [[GPUImageSepiaFilter alloc] init];
             [(GPUImageSepiaFilter *)filter setIntensity:0];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
         case 4:{
             [videoCamera removeAllTargets];
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"cross_3"];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
         case 5:{
             [videoCamera removeAllTargets];
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"cross_4"];
             [videoCamera addTarget:filter];
-            [filter addTarget:cropFliter];
-            [cropFliter addTarget:filterView];
+//            [filter addTarget:cropFliter];
+            [filter addTarget:_brightFilter];
+            [_brightFilter addTarget:_blendFliter];
+            [_uiElement addTarget:_blendFliter];
+            [_blendFliter addTarget:filterView];
             break;
         }
             

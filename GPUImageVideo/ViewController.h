@@ -14,7 +14,9 @@
     GPUImageView *filterView;
     GPUImageCropFilter * cropFliter;
 }
-
+@property (nonatomic, strong) GPUImageUIElement *uiElement;
+@property (nonatomic, strong) GPUImageBrightnessFilter *brightFilter;
+@property (nonatomic, strong) GPUImageAlphaBlendFilter *blendFliter;
 
 @end
 

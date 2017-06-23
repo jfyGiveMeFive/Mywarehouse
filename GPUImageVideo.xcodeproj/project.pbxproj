@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E3C4F4E1EFCCE9100102219 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */; };
+		3E3C4F501EFCE32D00102219 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3C4F4F1EFCE32D00102219 /* libGPUImage.a */; };
 		3E42AD991D86B1140058B908 /* cross_5.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8D1D86B1140058B908 /* cross_5.acv */; };
 		3E42AD9A1D86B1140058B908 /* cross_6.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8E1D86B1140058B908 /* cross_6.acv */; };
 		3E42AD9B1D86B1140058B908 /* cross_7.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8F1D86B1140058B908 /* cross_7.acv */; };
@@ -92,7 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
+		3E3C4F4F1EFCE32D00102219 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
 		3E42AD8D1D86B1140058B908 /* cross_5.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_5.acv; sourceTree = "<group>"; };
 		3E42AD8E1D86B1140058B908 /* cross_6.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_6.acv; sourceTree = "<group>"; };
 		3E42AD8F1D86B1140058B908 /* cross_7.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_7.acv; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 				3EC766651D7FD5D20061BAA4 /* UIKit.framework in Frameworks */,
 				3EC766631D7FD5CC0061BAA4 /* AVFoundation.framework in Frameworks */,
 				3EC766611D7FD5C60061BAA4 /* Foundation.framework in Frameworks */,
-				3E3C4F4E1EFCCE9100102219 /* libGPUImage.a in Frameworks */,
+				3E3C4F501EFCE32D00102219 /* libGPUImage.a in Frameworks */,
 				3EC7665F1D7FD5C00061BAA4 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,14 +404,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E3C4F4C1EFCCE9100102219 /* jingtai */ = {
-			isa = PBXGroup;
-			children = (
-				3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */,
-			);
-			path = jingtai;
-			sourceTree = "<group>";
-		};
 		3E42AE1E1D86BC450058B908 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,7 +535,7 @@
 				3E42AE6D1D87AC690058B908 /* 5555.png */,
 				3E5188DC1E261AA9002CB53A /* loginmovie.mp4 */,
 				3E74C64C1E27597800E73680 /* 123456.jpeg */,
-				3E3C4F4C1EFCCE9100102219 /* jingtai */,
+				3E3C4F4F1EFCE32D00102219 /* libGPUImage.a */,
 				3E42AE351D86BC740058B908 /* SDWebImage */,
 				3E42AE1E1D86BC450058B908 /* SDCycleScrollView */,
 				3EC7657B1D7FD4B00061BAA4 /* Main.storyboard */,
@@ -1121,7 +1113,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/GPUImageVideo/jingtai/libGPUImage.a\"",
+					"$(PROJECT_DIR)/GPUImageVideo",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1145,7 +1137,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/GPUImageVideo/jingtai/libGPUImage.a\"",
+					"$(PROJECT_DIR)/GPUImageVideo",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
