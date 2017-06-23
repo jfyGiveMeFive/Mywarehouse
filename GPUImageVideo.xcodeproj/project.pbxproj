@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3C4F4E1EFCCE9100102219 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */; };
 		3E42AD991D86B1140058B908 /* cross_5.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8D1D86B1140058B908 /* cross_5.acv */; };
 		3E42AD9A1D86B1140058B908 /* cross_6.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8E1D86B1140058B908 /* cross_6.acv */; };
 		3E42AD9B1D86B1140058B908 /* cross_7.acv in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AD8F1D86B1140058B908 /* cross_7.acv */; };
@@ -46,7 +47,6 @@
 		3E42AE6E1D87AC690058B908 /* 5555.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E42AE6D1D87AC690058B908 /* 5555.png */; };
 		3E42AE9A1D8959200058B908 /* WNAudioComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E42AE991D8959200058B908 /* WNAudioComposition.m */; };
 		3E5188DD1E261AA9002CB53A /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3E5188DC1E261AA9002CB53A /* loginmovie.mp4 */; };
-		3E6CCFAF1E24DAEB001FC438 /* WaterFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6CCFAE1E24DAEB001FC438 /* WaterFliterViewController.m */; };
 		3E74C64D1E27597800E73680 /* 123456.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3E74C64C1E27597800E73680 /* 123456.jpeg */; };
 		3E964F211DBB5968004AD3E8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E964F201DBB5968004AD3E8 /* SecondViewController.m */; };
 		3EC765741D7FD4B00061BAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC765731D7FD4B00061BAA4 /* main.m */; };
@@ -57,7 +57,6 @@
 		3EC765821D7FD4B00061BAA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EC765801D7FD4B00061BAA4 /* LaunchScreen.storyboard */; };
 		3EC7658D1D7FD4B10061BAA4 /* GPUImageVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7658C1D7FD4B10061BAA4 /* GPUImageVideoTests.m */; };
 		3EC765981D7FD4B10061BAA4 /* GPUImageVideoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC765971D7FD4B10061BAA4 /* GPUImageVideoUITests.m */; };
-		3EC766551D7FD4E60061BAA4 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC765A51D7FD4E50061BAA4 /* libGPUImage.a */; };
 		3EC7665C1D7FD5910061BAA4 /* CustomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC766591D7FD5910061BAA4 /* CustomTools.m */; };
 		3EC7665D1D7FD5910061BAA4 /* LeafButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7665B1D7FD5910061BAA4 /* LeafButton.m */; };
 		3EC7665F1D7FD5C00061BAA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC7665E1D7FD5C00061BAA4 /* CoreGraphics.framework */; };
@@ -93,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
 		3E42AD8D1D86B1140058B908 /* cross_5.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_5.acv; sourceTree = "<group>"; };
 		3E42AD8E1D86B1140058B908 /* cross_6.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_6.acv; sourceTree = "<group>"; };
 		3E42AD8F1D86B1140058B908 /* cross_7.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = cross_7.acv; sourceTree = "<group>"; };
@@ -158,8 +158,6 @@
 		3E42AE981D8959200058B908 /* WNAudioComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNAudioComposition.h; sourceTree = "<group>"; };
 		3E42AE991D8959200058B908 /* WNAudioComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNAudioComposition.m; sourceTree = "<group>"; };
 		3E5188DC1E261AA9002CB53A /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
-		3E6CCFAD1E24DAEB001FC438 /* WaterFliterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFliterViewController.h; sourceTree = "<group>"; };
-		3E6CCFAE1E24DAEB001FC438 /* WaterFliterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFliterViewController.m; sourceTree = "<group>"; };
 		3E74C64C1E27597800E73680 /* 123456.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123456.jpeg; sourceTree = "<group>"; };
 		3E964F1F1DBB5968004AD3E8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3E964F201DBB5968004AD3E8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		3EC765931D7FD4B10061BAA4 /* GPUImageVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPUImageVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC765971D7FD4B10061BAA4 /* GPUImageVideoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageVideoUITests.m; sourceTree = "<group>"; };
 		3EC765991D7FD4B10061BAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EC765A51D7FD4E50061BAA4 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
 		3EC765A91D7FD4E50061BAA4 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		3EC765AA1D7FD4E50061BAA4 /* GPUImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage.h; sourceTree = "<group>"; };
 		3EC765AB1D7FD4E50061BAA4 /* GPUImage3x3ConvolutionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImage3x3ConvolutionFilter.h; sourceTree = "<group>"; };
@@ -385,8 +382,8 @@
 				3EC766651D7FD5D20061BAA4 /* UIKit.framework in Frameworks */,
 				3EC766631D7FD5CC0061BAA4 /* AVFoundation.framework in Frameworks */,
 				3EC766611D7FD5C60061BAA4 /* Foundation.framework in Frameworks */,
+				3E3C4F4E1EFCCE9100102219 /* libGPUImage.a in Frameworks */,
 				3EC7665F1D7FD5C00061BAA4 /* CoreGraphics.framework in Frameworks */,
-				3EC766551D7FD4E60061BAA4 /* libGPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +404,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E3C4F4C1EFCCE9100102219 /* jingtai */ = {
+			isa = PBXGroup;
+			children = (
+				3E3C4F4D1EFCCE9100102219 /* libGPUImage.a */,
+			);
+			path = jingtai;
+			sourceTree = "<group>";
+		};
 		3E42AE1E1D86BC450058B908 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,8 +520,6 @@
 				3EC765791D7FD4B00061BAA4 /* ViewController.m */,
 				3E964F1F1DBB5968004AD3E8 /* SecondViewController.h */,
 				3E964F201DBB5968004AD3E8 /* SecondViewController.m */,
-				3E6CCFAD1E24DAEB001FC438 /* WaterFliterViewController.h */,
-				3E6CCFAE1E24DAEB001FC438 /* WaterFliterViewController.m */,
 				3E42AE671D86BECA0058B908 /* GPUImageBeautifyFilter.h */,
 				3E42AE681D86BECA0058B908 /* GPUImageBeautifyFilter.m */,
 				3E42AE981D8959200058B908 /* WNAudioComposition.h */,
@@ -540,13 +543,13 @@
 				3E42AE6D1D87AC690058B908 /* 5555.png */,
 				3E5188DC1E261AA9002CB53A /* loginmovie.mp4 */,
 				3E74C64C1E27597800E73680 /* 123456.jpeg */,
+				3E3C4F4C1EFCCE9100102219 /* jingtai */,
 				3E42AE351D86BC740058B908 /* SDWebImage */,
 				3E42AE1E1D86BC450058B908 /* SDCycleScrollView */,
 				3EC7657B1D7FD4B00061BAA4 /* Main.storyboard */,
 				3EC7657E1D7FD4B00061BAA4 /* Assets.xcassets */,
 				3EC765801D7FD4B00061BAA4 /* LaunchScreen.storyboard */,
 				3EC765831D7FD4B00061BAA4 /* Info.plist */,
-				3EC765A51D7FD4E50061BAA4 /* libGPUImage.a */,
 				3EC766701D7FD6390061BAA4 /* PrefixHeader.pch */,
 				3EC765A61D7FD4E50061BAA4 /* usr */,
 				3EC765721D7FD4B00061BAA4 /* Supporting Files */,
@@ -966,7 +969,6 @@
 				3E42AE5B1D86BC740058B908 /* SDWebImageDecoder.m in Sources */,
 				3E42AE661D86BC740058B908 /* UIView+WebCacheOperation.m in Sources */,
 				3E42AE9A1D8959200058B908 /* WNAudioComposition.m in Sources */,
-				3E6CCFAF1E24DAEB001FC438 /* WaterFliterViewController.m in Sources */,
 				3EC765741D7FD4B00061BAA4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1111,6 +1113,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YBJCD9VUBN;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GPUImageVideo/PrefixHeader.pch";
 				INFOPLIST_FILE = GPUImageVideo/Info.plist;
@@ -1118,7 +1121,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GPUImageVideo",
+					"\"$(SRCROOT)/GPUImageVideo/jingtai/libGPUImage.a\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1134,6 +1137,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YBJCD9VUBN;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GPUImageVideo/PrefixHeader.pch";
 				INFOPLIST_FILE = GPUImageVideo/Info.plist;
@@ -1141,7 +1145,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/GPUImageVideo",
+					"\"$(SRCROOT)/GPUImageVideo/jingtai/libGPUImage.a\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
